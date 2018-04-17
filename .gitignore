@@ -25,3 +25,9 @@
 
 # Ignore error_log
 error_log
+
+# Ignore node modules
+node_modules
+
+# Ignore mac data storage
+.DS_Store
