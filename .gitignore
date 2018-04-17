@@ -31,3 +31,6 @@ node_modules
 
 # Ignore mac data storage
 .DS_Store
+
+# Ignore the sass cache directory created by grunt-contrib-sass
+.sass-cache
