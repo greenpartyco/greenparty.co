@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       },
       dist: {
           files: {
-              '/web/themes/custom/candidate/css/style.css': '/web/themes/custom/candidate/scss/style.scss'
+              'web/themes/custom/candidate/css/style.css': 'web/themes/custom/candidate/scss/style.scss'
           }
       }
     },
