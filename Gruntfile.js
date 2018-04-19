@@ -88,4 +88,7 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify', 'sass']);
 
+  // Sass task.
+  grunt.registerTask('sass', ['sass']);
+
 };
