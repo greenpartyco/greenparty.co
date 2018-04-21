@@ -1,3 +1,15 @@
 /**
  * Place your custom styles here.
  */
+ .navbar-inverse {
+    background-color: #47c45c;
+    border-color: #118b2b;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    background-color: #09611c;
+}
+
+a {
+    color: #118b2b;
+}
