@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the committee theme.
+
+committee.settings:
+  type: theme_settings
+  label: 'committee settings'
