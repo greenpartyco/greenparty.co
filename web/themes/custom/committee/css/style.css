@@ -27,7 +27,7 @@
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    background-color: #054412;
+    border-color: #054412;
 }
 
 a {
