@@ -30,6 +30,11 @@
     border-color: #065215;
 }
 
+.logo.navbar-btn img {
+    height: 36px;
+    width: 36px;
+}
+
 a {
     color: #118b2b;
 }
