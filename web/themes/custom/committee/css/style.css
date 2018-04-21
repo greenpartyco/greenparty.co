@@ -14,6 +14,10 @@
     background-color: #054412;
 }
 
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+    background-color: #054412;
+}
+
 a {
     color: #118b2b;
 }
