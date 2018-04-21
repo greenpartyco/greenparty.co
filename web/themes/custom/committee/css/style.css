@@ -17,3 +17,7 @@
 a {
     color: #118b2b;
 }
+
+a:hover, a:focus {
+    color: #087411;
+}
