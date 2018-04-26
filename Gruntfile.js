@@ -1,94 +1,78 @@
-/*global module:false*/
 module.exports = function(grunt) {
 
-  // Project configuration.
-  grunt.initConfig({
-    // Metadata.
-    pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-      '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-      '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
-    // Task configuration.
-    concat: {
-      options: {
-        banner: '<%= banner %>',
-        stripBanners: true
-      },
-      dist: {
-        src: ['lib/<%= pkg.name %>.js'],
-        dest: 'dist/<%= pkg.name %>.js'
-      }
-    },
-    sass: {
-      options: {
-      },
-      dist: {
-          files: {
-              'web/themes/custom/candidate/css/style.css': 'web/themes/custom/candidate/scss/style.scss'
-          }
-      }
-    },
-    uglify: {
-      options: {
-        banner: '<%= banner %>'
-      },
-      dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.min.js'
-      }
-    },
-    jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        unused: true,
-        boss: true,
-        eqnull: true,
-        browser: true,
-        globals: {}
-      },
-      gruntfile: {
-        src: 'Gruntfile.js'
-      },
-      lib_test: {
-        src: ['lib/**/*.js', 'test/**/*.js']
-      }
-    },
-    qunit: {
-      files: ['test/**/*.html']
-    },
-    watch: {
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
-      },
-      lib_test: {
-        files: '<%= jshint.lib_test.src %>',
-        tasks: ['jshint:lib_test', 'qunit']
-      }
-    }
-  });
+	// 1. All configuration goes here 
+	grunt.initConfig({
 
-  // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-qunit');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+		pkg: grunt.file.readJSON('package.json'),
 
-  // Default task.
-  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify', 'sass']);
+		concat: {
+			dist: {
+				src: [
+					'web/themes/custom/candidate/js/src/*.js', // All JS in the libs folder
+				],
+				dest: 'web/themes/custom/candidate/js/build/script.js',
+			}
+		},
 
-  // Sass task.
-  grunt.registerTask('sass', ['sass']);
+		uglify: {
+			build: {
+				src: 'web/themes/custom/candidate/js/build/script.js',
+				dest: 'web/themes/custom/candidate/js/build/script.min.js'
+			}
+		},
+
+		sass: {
+			dist: {
+				options: {
+					style: 'compressed'
+				},
+				files: {
+					'web/themes/custom/candidate/css/style.css': 'web/themes/custom/candidate/scss/style.scss'
+				}
+			} 
+		},
+
+		autoprefixer: {
+			dist: {
+				files: {
+					'web/themes/custom/candidate/css/style.css': 'web/themes/custom/candidate/css/style.css' 
+				}
+			}
+		},
+
+		watch: {
+			scripts: {
+				files: ['web/themes/custom/candidate/js/*.js', 'web/themes/custom/candidate/js/build/*.js'],
+				tasks: ['concat', 'uglify'],
+				options: {
+					spawn: false,
+					livereload: true,
+				},
+			},
+
+			css: {
+				files: ['web/themes/custom/candidate/scss/*.scss'],
+				tasks: ['sass', 'autoprefixer'],
+				options: {
+					spawn: false,
+					livereload: true,
+				}
+			} 
+		},
+
+	});
+
+	// 3. Where we tell Grunt we plan to use this plug-in.
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-devtools');
+
+	// 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
+	grunt.registerTask('default', ['concat', 'uglify', 'sass']);
+
+	grunt.registerTask('dev', ['watch']);
 
 };
