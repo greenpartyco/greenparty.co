@@ -3,5 +3,5 @@ framework:
     theme:
       css/style.css: {}
   js:
-    bootstrap/assets/javascripts/bootstrap.js: {}
-    js/build/script.js: {}
+    bootstrap/assets/javascripts/bootstrap.min.js: {}
+    js/build/script.min.js: {}
