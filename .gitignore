@@ -34,3 +34,6 @@ node_modules
 
 # Ignore the sass cache directory created by grunt-contrib-sass
 .sass-cache
+
+# Ignore custom VS Code settings
+.vscode/settings.json
