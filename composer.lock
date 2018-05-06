@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c4db09fa5f3cc00467e56c5eb2841a5",
+    "content-hash": "6ff5c5fad3fec35d4495c62156d02752",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4363,18 +4363,80 @@
             }
         },
         {
-            "name": "drupal/viewsreference",
-            "version": "1.2.0",
+            "name": "drupal/views_bootstrap",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/viewsreference",
-                "reference": "8.x-1.2"
+                "url": "https://git.drupal.org/project/views_bootstrap",
+                "reference": "8.x-3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/viewsreference-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "5ccceed4ebb1b55c6a459431829e7c72477171b5"
+                "url": "https://ftp.drupal.org/files/projects/views_bootstrap-8.x-3.0.zip",
+                "reference": "8.x-3.0",
+                "shasum": "65f6ebc231b28235d0404140cc8420580206e101"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0",
+                    "datestamp": "1507098244",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "aburrows",
+                    "homepage": "https://www.drupal.org/user/577844"
+                },
+                {
+                    "name": "ericpugh",
+                    "homepage": "https://www.drupal.org/user/130084"
+                },
+                {
+                    "name": "ikeigenwijs",
+                    "homepage": "https://www.drupal.org/user/583238"
+                },
+                {
+                    "name": "mrded",
+                    "homepage": "https://www.drupal.org/user/556088"
+                }
+            ],
+            "description": "Integrate the Bootstrap framework with Views.",
+            "homepage": "https://www.drupal.org/project/views_bootstrap",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/views_bootstrap"
+            }
+        },
+        {
+            "name": "drupal/viewsreference",
+            "version": "2.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/viewsreference",
+                "reference": "8.x-2.0-alpha4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/viewsreference-8.x-2.0-alpha4.zip",
+                "reference": "8.x-2.0-alpha4",
+                "shasum": "6e5a2c60b7ddc0dad1fb62b004fe5f88ee337098"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -4385,14 +4447,14 @@
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.x": "1.x-dev"
+                    "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1515538984",
+                    "version": "8.x-2.0-alpha4",
+                    "datestamp": "1515706384",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -4414,7 +4476,7 @@
                     "homepage": "https://www.drupal.org/user/545912"
                 }
             ],
-            "description": "Views Reference",
+            "description": "Views reference",
             "homepage": "http://drupal.org/project/viewsreference",
             "keywords": [
                 "Drupal"
