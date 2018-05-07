@@ -109,7 +109,7 @@ parameters:
       # Disable by setting to [].
       #
       # @default ['session', 'user']
-      contexts: ['session', 'user']
+      contexts: ['session', 'user', 'url.site']
       # Tags with a high invalidation frequency.
       #
       # Disable by setting to [].
