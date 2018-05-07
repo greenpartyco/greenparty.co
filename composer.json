@@ -48,6 +48,7 @@
         "drupal/video_embed_field": "^1.5",
         "drupal/views_bootstrap": "^3.0",
         "drupal/viewsreference": "2.0-alpha4",
+        "drupal/webform": "^5.0@RC",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
