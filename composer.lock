@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7d342ce7f8bbe6398cb6936b655052e",
+    "content-hash": "61bb666c8e21e43b7e60c453ad98dde0",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1685,6 +1685,53 @@
             "homepage": "https://www.drupal.org/project/adminimal_theme",
             "support": {
                 "source": "http://cgit.drupalcode.org/adminimal_theme"
+            }
+        },
+        {
+            "name": "drupal/antibot",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/antibot",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/antibot-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "4cb067e77929984c8cf5b05a84734c62d6fd19b3"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1521069185",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mstef",
+                    "homepage": "https://www.drupal.org/user/107190"
+                }
+            ],
+            "description": "Prevent forms from being submitted without JavaScript enabled",
+            "homepage": "https://www.drupal.org/project/antibot",
+            "support": {
+                "source": "http://cgit.drupalcode.org/antibot"
             }
         },
         {
