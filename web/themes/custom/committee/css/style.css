@@ -42,3 +42,7 @@ a {
 a:hover, a:focus {
     color: #087411;
 }
+
+.alert.alert-info.messages.info.region.region-help {
+    display: none;
+}
