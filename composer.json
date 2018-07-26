@@ -30,6 +30,7 @@
         "drupal/commerce_paypal": "^1.0@beta",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.3",
+        "drupal/devel": "^1.2",
         "drupal/domain": "^1.0@alpha",
         "drupal/domain_site_settings": "^1.2",
         "drupal/domain_theme_switch": "^1.3",
